@@ -1,0 +1,63 @@
+#include<stdio.h>
+struct ab{
+int a;
+};
+int fifo(int page [3],int frames_no[10])
+{
+	int i;
+	for(i=3;i<10;i++)
+	printf("\n %d \t%d ",page[i], frames_no[i]);
+}
+int lru(int page[3],int frames_no[10])
+{
+	printf("\nfifgho");
+}
+int optimal(int page[3],int frames_no[10])
+{
+	
+	printf("\nfikhjfo");
+}
+int main()
+{
+	float avg=0,avg1=0;
+	int i,j;
+	int frames_no [10],page[3];
+	printf("\n enter 10 demands");
+	for(i=0;i<10;i++)
+		scanf("%d",&frames_no[i]);
+		for(i=0;i<3;i++){
+			if (i==0){
+				// page is blank 
+				page[i]=frames_no[i];
+				avg=((0.7*8)+(.3*100));
+				printf("\npage is blanck page acesss time%f", avg);
+				
+			}
+		else {
+		
+		// not replaced
+			avg=((0.7*8)+(.3*100));
+		printf("\npage fault not replaced %f", avg);
+	}
+		}
+		for(i=3;i<10;i++){
+			for(j=0;j<3;j++)
+			{
+				if(frames_no[i]==page[j]){
+							printf("\n no page fault");
+							
+						break;
+				}
+				else
+					j++;
+			}
+				if(page[j]!=frames_no[i]){
+						
+						avg1=((0.7*20)+(.3*100));
+						printf("\npage fault page replaced %f ",avg1);
+				
+				}
+			
+		}
+	
+}
